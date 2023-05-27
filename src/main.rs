@@ -49,8 +49,8 @@ impl EventHandler<ggez::GameError> for MainState {
             for (j, &cell) in row.iter().enumerate() {
                 if cell {
                     let rect = graphics::Rect::new(
-                        (j as f32 * CELL_SIZE as f32),
-                        (i as f32 * CELL_SIZE as f32),
+                        j as f32 * CELL_SIZE as f32,
+                        i as f32 * CELL_SIZE as f32,
                         CELL_SIZE as f32,
                         CELL_SIZE as f32,
                     );
